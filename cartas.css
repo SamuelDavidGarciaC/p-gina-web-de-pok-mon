@@ -1,0 +1,288 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: #fcf6bd;
+  background: linear-gradient(to right, #ade8f4, #fcf6bd, #b9fbc0);
+}
+
+a {
+  text-decoration: none;
+  color: #329634;
+}
+
+header {
+  display: flex;
+  min-height: 70px;
+  background-color: #fb8500;
+  box-shadow: 0 .5rem 1rem rgb(128, 128, 128);
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+  margin-right: 10px;
+}
+
+nav a {
+  font-weight: 600;
+  padding-right: 10px;
+}
+
+nav a:hover {
+  color: #b9fbc0;
+}
+
+@media (max-width:700px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    padding: 10px 0px;
+  }
+}
+
+
+
+
+
+
+
+*/*Sombra de la carta*/
+#container {
+  box-shadow: 0 15px 30px 1px rgba(83, 1, 101, 0.31);
+  background: linear-gradient(to right,#7D2EA1,#FCC200,#FE0102,#ED01CF,#FDA0FB,#B3D5EE, #01B144,#FDFD00,#E10002,#6ECF41,#B3D5EE,#01B0F3,
+    #139BD7);
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 5em auto;
+  height: 350px;
+  width: 700px;
+
+}
+
+.info {
+  text-transform: capitalize;
+}
+
+.info :first-child{
+  text-transform: capitalize;
+}
+
+.price,.buy{
+  text-transform: capitalize;
+}
+
+.price .buy :first-child{
+text transform: capitalize;
+}
+
+
+
+
+
+.product-details {
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  padding: 30px;
+  height: 100%;
+  float: left;
+  width: 40%;
+
+}
+
+/* 	Nombe del*/
+#container .product-details h1 {
+  font-family: 'Old Standard TT', serif;
+  display: inline-block;
+  position: relative;
+  font-size: 34px;
+  color: #344055;
+  margin: 0;
+
+}
+
+#container .product-details h1:before {
+  position: absolute;
+  content: '';
+  right: 0%;
+  top: 0%;
+  transform: translate(25px, -15px);
+  font-family: 'Farsan', cursive;
+  display: inline-block;
+  background: #FFA69E;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 3px;
+  color: #FFF;
+  margin: 0;
+  animation: chan-sh 6s ease infinite;
+
+}
+
+@keyframes chan-sh {
+  from {
+    content: 'Pokémon';
+  }
+  to {
+    content: 'Pokedex';}
+}
+
+/*Product Rating  */
+.hint-star {
+  display: inline-block;
+  margin-left: 0.5em;
+  color: gold;
+  width: 50%;
+}
+
+/* Estilo de descripción */
+#container .product-details>p {
+  font-family: 'Farsan', cursive;
+  text-align: center;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+/* control */
+
+.control {
+  position: absolute;
+  bottom: 20%;
+  left: 22.8%;
+}
+
+/* the Button */
+.btn {
+  transform: translateY(0px);
+  transition: 0.3s linear;
+  background: #49C608;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: #eee;
+  padding: 0;
+  margin: 0;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+.btn span {
+  font-family: 'Farsan', cursive;
+  transition: transform 0.3s;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+/* prmer icono de carta */
+.btn .price,
+.shopping-cart {
+  background: rgb(69, 66, 66);
+  border: 0;
+  margin: 0;
+}
+
+.btn .price {
+  transform: translateX(-10%);
+  padding-right: 15px;
+}
+
+/* the Icon */
+.btn .shopping-cart {
+  transform: translateX(-100%);
+  position: absolute;
+  background: #333;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+.btn .buy {
+  z-index: 3;
+  font-weight: bolder;
+}
+
+.btn:hover .price {
+  transform: translateX(-110%);
+}
+
+.btn:hover .shopping-cart {
+  transform: translateX(0%);
+}
+
+
+.product-image {
+  transition: all 0.3s ease-out;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  float: right;
+  width: 50%;
+  display: inline-block;
+}
+
+#container img {
+  width: 100%;
+  height: 100%;
+}
+
+
+/*información*/
+.info {
+  background: rgba(27, 26, 26, 0.9);
+  font-family: 'Farsan', cursive;
+  transition: all 0.3s ease-out;
+  transform: translateX(-100%);
+  position: absolute;
+  line-height: 1.9;
+  text-align: left;
+  font-size: 110%;
+  cursor: no-drop;
+  color: #FFF;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.info h2 {
+  text-align: center
+}
+
+.product-image:hover .info {
+  transform: translateX(0);
+}
+
+.info ul li {
+  transition: 0.3s ease;
+}
+
+.info ul li:hover {
+  transform: translateX(50px) scale(1.3);
+}
+
+.product-image:hover img {
+  transition: all 0.3s ease-out;
+}
+
+.product-image:hover img {
+  transform: scale(1.2, 1.2);
+}
+
